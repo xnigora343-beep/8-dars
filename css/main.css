@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter {
+    background-color: #ffffff;
+    width: 260px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter__section {
+    margin-bottom: 25px;
+}
+
+.filter__title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter__help {
+    color: #ccc;
+    font-size: 14px;
+    cursor: help;
+}
+
+.filter__input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.filter__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 0;
+}
+
+.filter__checkbox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filter__more {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #ff8a43;
+    text-decoration: none;
+}
+
+.filter__more:hover {
+    text-decoration: underline;
+}
+
+.filter__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    background-color: #f0f2f5;
+    color: #8e949f;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.badge--gradient {
+    background: linear-gradient(135deg, #a832fc, #ff8a43);
+    color: white;
+}
+
+.badge--wide {
+    width: 65%;
+}
