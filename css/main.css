@@ -55,7 +55,7 @@ body {
     gap: 12px 0;
 }
 
-.filter__checkbox {
+.filter__label {
     width: 50%;
     display: flex;
     align-items: center;
@@ -63,8 +63,80 @@ body {
     font-size: 13px;
     color: #444;
     cursor: pointer;
+    position: relative;
 }
 
+/* Standart inputlarni butunlay yashiramiz */
+.real-checkbox, .real-radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* --- CUSTOM CHECKBOX STILI --- */
+.custom-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Tanlangan (checked) holatdagi checkbox */
+.real-checkbox:checked + .custom-checkbox {
+    background-color: #ff8a43;
+    border-color: #ff8a43;
+}
+
+/* Checkbox ichidagi "galka" (belgi) */
+.real-checkbox:checked + .custom-checkbox::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* --- CUSTOM RADIO STILI --- */
+.custom-radio {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Dumaloq shakl uchun */
+    position: relative;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Tanlangan (checked) holatdagi radio button */
+.real-radio:checked + .custom-radio {
+    border-color: #ff8a43;
+}
+
+/* Radio ichidagi kichik olovrang nuqta */
+.real-radio:checked + .custom-radio::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #ff8a43;
+    border-radius: 50%;
+}
+
+/* Boshqa elementlar dizayni */
 .filter__more {
     display: inline-block;
     margin-top: 12px;
